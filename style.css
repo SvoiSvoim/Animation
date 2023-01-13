@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.wrapper {
+    padding-top: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #5188ff;
+    border-top-color: #ff3434;
+    background-color: #5188ff;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    /* animation: run 10s ease-in 2 alternate forwards; */
+    animation: run 3s;
+}
+
+/* 10s - время цикла,
+ease-in - динамика,
+2 - кол-во циклов,
+alternate - плавное возвращение в исходное положение
+infiniti - бесконечное кол-во циклов(нужно убрать 2 при использовании)
+forwards - чтобы элемент остался в конечной точке
+чтобы применить анимацию к другому блоку, создаем @keyframe с другим именем
+и в свойствах animation обращаемся к этому имени  */
+
+
+.block2 {
+    margin-left: 150px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+/* @keyframes run {
+    10% {
+        transform: translate(0, 100px);
+    }
+
+    30% {
+        background-color: #ff3434;
+        transform: translate(100px, 100px);
+    }
+
+    50% {
+        transform: translate(100px, -100px);
+    }
+
+    100% {
+        background-color: green;
+        transform: translate(-100px, -100px);
+    }
+} */
+
+@keyframes run {
+    100% {
+        transform: rotate(360deg);
+    }
+}
